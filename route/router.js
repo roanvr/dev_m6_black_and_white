@@ -9,7 +9,7 @@ router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/index.html'))
 });
 
-router.get('cargar', async(req,res) => {
+router.get('/cargar', async(req,res) => {
     const { img } = req.query;
     const imagenGuardada = `imagen${uuidv4().slice(0,4)}.jpg`
     const imgJimp = await Jimp.read(img);
